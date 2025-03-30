@@ -73,10 +73,12 @@
     </section>
 
     <section class="pricing-container container">
+      
+    <button class="nav prev" onclick="prevSlide()" aria-label="Previous slide">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
       <div class="carousel-wrapper">
-        <button class="nav prev" onclick="prevSlide()">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
     
         <div class="carousel-container">
           <div class="carousel">
@@ -85,47 +87,44 @@
             </div>
           </div>
         </div>
-    
-        <button class="nav next" onclick="nextSlide()">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
       </div>
-    </section>
+          
+    <button class="nav next" onclick="nextSlide()" aria-label="Next slide">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
     
+    </section>
 
     <script src="./script/index.js"></script>
 
     <section>
       <div class="about-us">
         <h2 class="about-us-header">About Us</h2>
-        <p class="about-description">Pristine Detailing started from a love of cars and the satisfaction of seeing them shine like new. Every vehicle we touch gets the same care and attention we’d give our own — because for us, it’s more than just detailing, it’s personal. ❤️🧼</p>
+        <p class="description">Pristine Detailing started from a love of cars and the satisfaction of seeing them shine like new. Every vehicle we touch gets the same care and attention we'd give our own — because for us, it's more than just detailing, it's personal. ❤️🧼</p>
+        <h2 class="about-us-header">Contact Us</h2>
+        <p class="description">Feel free to contact us if you have any questions or inquiries about the business or our services.</p>
+        <a href="tel:+12049517206" class="book-now">Book Now</a>
       </div>
     </section> 
 
   </main>
 
   <footer class="footer-container">
-    <div class="contact-us">
-      <h2 class="contact-us-header">Contact Us</h2>
-      <p class="contact-description">Feel free to contact us if you have any questions or inquiries about the business or our services.</p>
-      <button class="book-now">Book Now</button>
-    </div>
-    
     <nav class="footer-navbar">
       <div class="logo"></div>
       <ul class="footer-navlinks">
         <li>
-          <a href="https://www.facebook.com/share/15undGty4X/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/15undGty4X/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/pristinedetailing_204?igsh=OWpsamF2Y2xwdWM3&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/pristinedetailing_204?igsh=OWpsamF2Y2xwdWM3&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
           </a>
         </li>
         <li>
-          <a href="tel:+12049517206">
+          <a href="tel:+12049517206" aria-label="Call us">
             <i class="fas fa-phone-alt"></i>
           </a>
         </li>
