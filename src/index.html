@@ -6,9 +6,130 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="./style/style.css" />
   <link rel="stylesheet" href="./style/reset.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/react-icons@4.11.0/dist/react-icons.min.js"></script>
   <script src="./script/index.js"></script>
+
+  <header>
+    <nav class="container navbar">
+      <div class="logo"></div>
+      <ul class="navlinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <img 
+      class="hero-banner"
+      src="../assets/img/neils-red-SI.png" 
+      alt="Red Honda Civic Si"
+      >
+    </section>
+
+    <!-- <section class="container">
+      <div class="about-us">
+        <h2 class="about-us-header">About Us</h2>
+        <p class="description">Pristine Detailing started from a love of cars and the satisfaction of seeing them shine like new. Every vehicle we touch gets the same care and attention we’d give our own — because for us, it’s more than just detailing, it’s personal. ❤️🧼</p>
+      </div>
+    </section> -->
+
+    <section class="service-container">
+      <div class="container-box container">
+        <h2 class="offer-text">What We Offer</h2>
+        <div class="services">
+          
+          <div class="service-card">
+            <h3 class="service-title">Interior</h3>
+            <img src="../assets/img/interior.jpg" alt="Interior detailing">
+            <ul>
+              <li><i class="fas fa-check"></i>Vacuum carpets & seats</li>
+              <li><i class="fas fa-check"></i>Steam clean interior</li>
+              <li><i class="fas fa-check"></i>Leather treatment</li>
+            </ul>
+          </div>
+    
+          <div class="service-card">
+            <h3 class="service-title">Exterior</h3>
+            <img src="../assets/img/soapy-red-car-black-rims.jpg" alt="Exterior detailing">
+            <ul>
+              <li><i class="fas fa-check"></i>Hand wash & dry</li>
+              <li><i class="fas fa-check"></i>Clay bar treatment</li>
+              <li><i class="fas fa-check"></i>Wax & polish</li>
+            </ul>
+          </div>
+    
+          <div class="service-card">
+            <h3 class="service-title">Full Detail</h3>
+            <img src="../assets/img/clean-white-car.jpg" alt="Full car detailing">
+            <ul>
+              <li><i class="fas fa-check"></i>Complete inside & out</li>
+              <li><i class="fas fa-check"></i>Engine bay cleaning</li>
+              <li><i class="fas fa-check"></i>Paint protection</li>
+            </ul>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-container">
+      <div class="carousel-container">
+        <div class="category-tabs">
+          <button onclick="changeCategory('engine')">Engine Bay Wash</button>
+          <button onclick="changeCategory('interior')">Interior Detail</button>
+          <button onclick="changeCategory('exterior')">Exterior Detail</button>
+          <button onclick="changeCategory('full')">Full Package</button>
+        </div>
+    
+        <div class="carousel">
+          <button class="nav prev" onclick="prevSlide()">&#8249;</button>
+    
+          <div class="carousel-track" id="carousel-track">
+            <!-- Images will be injected here -->
+          </div>
+    
+          <button class="nav next" onclick="nextSlide()">&#8250;</button>
+        </div>
+      </div>
+      <script src="carousel.js"></script>
+    </section>
+    
+
+  </main>
+
+  <footer class="footer-container">
+    <nav class="footer-navbar">
+      <div class="logo"></div>
+      <ul class="footer-navlinks">
+        <li>
+          <a href="https://www.facebook.com/share/15undGty4X/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/pristinedetailing_204?igsh=OWpsamF2Y2xwdWM3&utm_source=qr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+12049517206">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 
 </body>
 </html>
