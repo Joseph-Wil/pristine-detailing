@@ -12,10 +12,6 @@
   />
 </head>
 <body>
-  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/react-icons@4.11.0/dist/react-icons.min.js"></script>
-  <script src="./script/index.js"></script>
 
   <header>
     <nav class="container navbar">
@@ -36,13 +32,6 @@
       alt="Red Honda Civic Si"
       >
     </section>
-
-    <!-- <section class="container">
-      <div class="about-us">
-        <h2 class="about-us-header">About Us</h2>
-        <p class="description">Pristine Detailing started from a love of cars and the satisfaction of seeing them shine like new. Every vehicle we touch gets the same care and attention we’d give our own — because for us, it’s more than just detailing, it’s personal. ❤️🧼</p>
-      </div>
-    </section> -->
 
     <section class="service-container">
       <div class="container-box container">
@@ -71,7 +60,7 @@
     
           <div class="service-card">
             <h3 class="service-title">Full Detail</h3>
-            <img src="../assets/img/clean-white-car.jpg" alt="Full car detailing">
+            <img src="../assets/img/beamer.jpg" alt="Full car detailing">
             <ul>
               <li><i class="fas fa-check"></i>Complete inside & out</li>
               <li><i class="fas fa-check"></i>Engine bay cleaning</li>
@@ -83,32 +72,45 @@
       </div>
     </section>
 
-    <section class="pricing-container">
-      <div class="carousel-container">
-        <div class="category-tabs">
-          <button onclick="changeCategory('engine')">Engine Bay Wash</button>
-          <button onclick="changeCategory('interior')">Interior Detail</button>
-          <button onclick="changeCategory('exterior')">Exterior Detail</button>
-          <button onclick="changeCategory('full')">Full Package</button>
-        </div>
+    <section class="pricing-container container">
+      <div class="carousel-wrapper">
+        <button class="nav prev" onclick="prevSlide()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
     
-        <div class="carousel">
-          <button class="nav prev" onclick="prevSlide()">&#8249;</button>
-    
-          <div class="carousel-track" id="carousel-track">
-            <!-- Images will be injected here -->
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="carousel-track" id="carousel-track">
+              <!-- Cards will be injected -->
+            </div>
           </div>
-    
-          <button class="nav next" onclick="nextSlide()">&#8250;</button>
         </div>
+    
+        <button class="nav next" onclick="nextSlide()">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </div>
-      <script src="carousel.js"></script>
     </section>
     
+
+    <script src="./script/index.js"></script>
+
+    <section>
+      <div class="about-us">
+        <h2 class="about-us-header">About Us</h2>
+        <p class="about-description">Pristine Detailing started from a love of cars and the satisfaction of seeing them shine like new. Every vehicle we touch gets the same care and attention we’d give our own — because for us, it’s more than just detailing, it’s personal. ❤️🧼</p>
+      </div>
+    </section> 
 
   </main>
 
   <footer class="footer-container">
+    <div class="contact-us">
+      <h2 class="contact-us-header">Contact Us</h2>
+      <p class="contact-description">Feel free to contact us if you have any questions or inquiries about the business or our services.</p>
+      <button class="book-now">Book Now</button>
+    </div>
+    
     <nav class="footer-navbar">
       <div class="logo"></div>
       <ul class="footer-navlinks">

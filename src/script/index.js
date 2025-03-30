@@ -1,48 +1,82 @@
-const imageData = {
-  engine: [
-    "engine1.jpg", "engine2.jpg", "engine3.jpg", "engine4.jpg", "engine5.jpg"
-  ],
-  interior: [
-    "interior1.jpg", "interior2.jpg", "interior3.jpg", "interior4.jpg"
-  ],
-  exterior: [
-    "exterior1.jpg", "exterior2.jpg", "exterior3.jpg", "exterior4.jpg"
-  ],
-  full: [
-    "full1.jpg", "full2.jpg", "full3.jpg", "full4.jpg", "full5.jpg"
-  ]
-};
 
-let currentCategory = 'engine';
+const packages = [
+  {
+    title: "Engine Bay Wash",
+    price: "$50",
+    description: [
+      "Pre-wash",
+      "Degrease",
+      "Towel dry",
+      "Shine"
+    ],
+    image: "engine-bay.jpg"
+  },
+  {
+    title: "Interior Detail",
+    price: "$120",
+    description: [
+      "Vacuum",
+      "Interior wipe down",
+      "Floor matts",
+      "+$40 stain removal/deep cleaning of seats"
+    ],    
+    image: "interior.jpg"
+  },
+  {
+    title: "Exterior Wash",
+    price: "$80",
+    description: [
+      "Pre-wash",
+      "Foam wash",
+      "Contact wash",
+      "Rinse",
+      "Graphene wax",
+      "+$40 Decontamination"
+    ],    
+    image: "soapy-red-car-black-rims.jpg"
+  },
+  {
+    title: "Full Package",
+    price: "$300",
+    description: [
+      "Engine bay wash",
+      "Interior detailing",
+      "Exterior wash"
+    ],    
+    image: "beamer.jpg"
+  }
+];
+
 let currentIndex = 0;
-
 const track = document.getElementById("carousel-track");
 
-function renderImages(category) {
+function renderCards() {
   track.innerHTML = "";
-  imageData[category].forEach((img) => {
-    const div = document.createElement("div");
-    div.classList.add("carousel-item");
 
-    const image = document.createElement("img");
-    image.src = `./assets/${img}`; // update path as needed
-    image.alt = category;
+  packages.forEach((pkg) => {
+    const card = document.createElement("div");
+    card.classList.add("carousel-card");
 
-    div.appendChild(image);
-    track.appendChild(div);
-  });
+    card.innerHTML = `
+      <h3 class="card-title">${pkg.title}</h3>
+      <div class="card-body">
+        <img src="../assets/img/${pkg.image}" alt="${pkg.title}" />
+        <div class="card-info">
+          <ul class="description-list">
+            ${pkg.description.map(point => `<li>${point}</li>`).join("")}
+          </ul>
+        <p class="price"><span class="price-title">Price:</span>${pkg.price}</p>
+        </div>
+      </div>
+    `;
 
-  currentIndex = 0;
+    track.appendChild(card);
+  })
   updateSlide();
 }
 
-function changeCategory(category) {
-  currentCategory = category;
-  renderImages(currentCategory);
-}
-
 function updateSlide() {
-  const offset = currentIndex * (100 / 3);
+  const offset = currentIndex * 100;
   track.style.transform = `translateX(-${offset}%)`;
 }
 
@@ -54,12 +88,11 @@ function prevSlide() {
 }
 
 function nextSlide() {
-  const maxIndex = imageData[currentCategory].length - 3;
+  const maxIndex = packages.length - 1;
   if (currentIndex < maxIndex) {
     currentIndex++;
     updateSlide();
   }
 }
 
-// Initialize with default category
-renderImages(currentCategory);
+renderCards();
